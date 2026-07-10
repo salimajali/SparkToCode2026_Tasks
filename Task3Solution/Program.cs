@@ -151,6 +151,18 @@
 				);
 			}
 
+			// Task 9 : Round Up / Round Down Explorer
+			Console.Write("Enter a decimal number: ");
+			double number = double.Parse(Console.ReadLine());
+
+			double nearestNumber = Math.Round(number);
+			double roundedUp = Math.Ceiling(number);
+			double roundedDown = Math.Floor(number);
+
+			Console.WriteLine("Nearest Whole Number: " + nearestNumber);
+			Console.WriteLine("Always Rounded Up: " + roundedUp);
+			Console.WriteLine("Always Rounded Down: " + roundedDown);
+
 
 
 
