@@ -236,6 +236,40 @@
 				Console.WriteLine("Verification Failed");
 			}
 
+			// Task 12 : Birthday Insights
+			try
+			{
+				Console.Write("Enter your date of birth (yyyy-MM-dd): ");
+				DateTime birthDate =
+					DateTime.Parse(Console.ReadLine());
+
+				DateTime today = DateTime.Today;
+
+				int age = today.Year - birthDate.Year;
+
+				if (
+					today.Month < birthDate.Month ||
+					(
+						today.Month == birthDate.Month &&
+						today.Day < birthDate.Day
+					)
+				)
+				{
+					age = age - 1;
+				}
+
+				Console.WriteLine("Age: " + age);
+				Console.WriteLine(
+					"Day of Birth: " + birthDate.DayOfWeek
+				);
+			}
+			catch (FormatException)
+			{
+				Console.WriteLine(
+					"Invalid date. Please use the format yyyy-MM-dd."
+				);
+			}
+
 
 
 
