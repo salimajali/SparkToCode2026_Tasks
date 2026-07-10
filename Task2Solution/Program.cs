@@ -15,7 +15,18 @@
 
 			Console.WriteLine("Liftoff!");
 
+			// Task 2 : Sum of Numbers 1 to N
+			Console.Write("Enter a positive whole number: ");
+			int number = int.Parse(Console.ReadLine());
 
+			int total = 0;
+
+			for (int counter = 1; counter <= number; counter++)
+			{
+				total = total + counter;
+			}
+
+			Console.WriteLine("Final Sum: " + total);
 		}
 	}
 }
