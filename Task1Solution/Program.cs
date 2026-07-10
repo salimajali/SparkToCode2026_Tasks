@@ -229,6 +229,58 @@
 						break;
 				}
 
+				//Task 10 : Mini Calculator
+
+				Console.Write("Enter the first number: ");
+				double firstNumber = double.Parse(Console.ReadLine());
+
+				Console.Write("Enter the second number: ");
+				double secondNumber = double.Parse(Console.ReadLine());
+
+				Console.Write("Enter an operator (+, -, *, /, %): ");
+				string operatorChoice = Console.ReadLine();
+
+				switch (operatorChoice)
+				{
+					case "+":
+						Console.WriteLine("Result: " + (firstNumber + secondNumber));
+						break;
+
+					case "-":
+						Console.WriteLine("Result: " + (firstNumber - secondNumber));
+						break;
+
+					case "*":
+						Console.WriteLine("Result: " + (firstNumber * secondNumber));
+						break;
+
+					case "/":
+						if (secondNumber != 0)
+						{
+							Console.WriteLine("Result: " + (firstNumber / secondNumber));
+						}
+						else
+						{
+							Console.WriteLine("Cannot divide by zero");
+						}
+						break;
+
+					case "%":
+						if (secondNumber != 0)
+						{
+							Console.WriteLine("Result: " + (firstNumber % secondNumber));
+						}
+						else
+						{
+							Console.WriteLine("Cannot divide by zero");
+						}
+						break;
+
+					default:
+						Console.WriteLine("Invalid operator");
+						break;
+				}
+
 
 
 			}
