@@ -129,8 +129,33 @@
 				{
 					Console.WriteLine("Weather classification: Hot");
 				}
+				// Task 7 : Movie Ticket Pricing
 
-				
+				Console.Write("Enter your age: ");
+				int age = int.Parse(Console.ReadLine());
+
+				string category;
+				double price;
+
+				if (age >= 0 && age <= 12)
+				{
+					category = "Child";
+					price = 2.000;
+				}
+				else if (age >= 13 && age <= 59)
+				{
+					category = "Adult";
+					price = 5.000;
+				}
+				else
+				{
+					category = "Senior";
+					price = 3.000;
+				}
+
+				Console.WriteLine("Category: " + category);
+				Console.WriteLine("Ticket Price: " + price + " OMR");
+
 
 
 
