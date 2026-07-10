@@ -27,6 +27,20 @@
 			}
 
 			Console.WriteLine("Final Sum: " + total);
+
+			// Task 3 : Multiplication Table
+
+			Console.Write("Enter a number: ");
+			int number1 = int.Parse(Console.ReadLine());
+
+			for (int counter = 1; counter <= 10; counter++)
+			{
+				int result = number * counter;
+
+				Console.WriteLine(
+					number + " x " + counter + " = " + result
+				);
+			}
 		}
 	}
 }
