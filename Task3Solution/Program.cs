@@ -38,6 +38,18 @@
 			Console.WriteLine("Lowercase: " + lowerName);
 			Console.WriteLine("Number of Characters: " + characterCount);
 
+			// Task 4 : Subscription End Date
+			Console.Write("Enter the number of free trial days: ");
+			int trialDays = int.Parse(Console.ReadLine());
+
+			DateTime startDate = DateTime.Today;
+			DateTime endDate = startDate.AddDays(trialDays);
+
+			Console.WriteLine(
+				"Trial End Date: " +
+				endDate.ToString("yyyy-MM-dd")
+			);
+
 		}
 	}
 }
