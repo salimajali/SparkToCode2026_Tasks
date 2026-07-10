@@ -123,7 +123,7 @@
 			try
 			{
 				Console.Write("Enter the membership start date (yyyy-MM-dd): ");
-				DateTime startDate = DateTime.Parse(Console.ReadLine());
+				DateTime startDate1 = DateTime.Parse(Console.ReadLine());
 
 				Console.Write("Enter the number of valid membership days: ");
 				int validDays = int.Parse(Console.ReadLine());
@@ -153,7 +153,7 @@
 
 			// Task 9 : Round Up / Round Down Explorer
 			Console.Write("Enter a decimal number: ");
-			double number = double.Parse(Console.ReadLine());
+			double number3 = double.Parse(Console.ReadLine());
 
 			double nearestNumber = Math.Round(number);
 			double roundedUp = Math.Ceiling(number);
@@ -162,6 +162,41 @@
 			Console.WriteLine("Nearest Whole Number: " + nearestNumber);
 			Console.WriteLine("Always Rounded Up: " + roundedUp);
 			Console.WriteLine("Always Rounded Down: " + roundedDown);
+
+			// Task 10 : Word Position Finder
+
+			Console.Write("Enter a full sentence: ");
+			string sentence = Console.ReadLine();
+
+			Console.Write("Enter a word to search for: ");
+			string searchWord = Console.ReadLine();
+
+			string cleanSentence = sentence.ToLower();
+			string cleanSearchWord = searchWord.ToLower();
+
+			int firstPosition =
+				cleanSentence.IndexOf(cleanSearchWord);
+
+			int lastPosition =
+				cleanSentence.LastIndexOf(cleanSearchWord);
+
+			if (firstPosition == -1)
+			{
+				Console.WriteLine("Word not found");
+			}
+			else
+			{
+				Console.WriteLine(
+					"First Occurrence Position: " + firstPosition
+				);
+
+				Console.WriteLine(
+					"Last Occurrence Position: " + lastPosition
+				);
+			}
+
+
+
 
 
 
