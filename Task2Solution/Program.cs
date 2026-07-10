@@ -87,7 +87,27 @@
 
 			Console.WriteLine("Number of attempts: " + attempts);
 
+			// Task 6 : Safe Division Calculator
+			try
+			{
+				Console.Write("Enter the first number: ");
+				int firstNumber = int.Parse(Console.ReadLine());
 
+				Console.Write("Enter the second number: ");
+				int secondNumber = int.Parse(Console.ReadLine());
+
+				int result = firstNumber / secondNumber;
+
+				Console.WriteLine("Division Result: " + result);
+			}
+			catch (DivideByZeroException)
+			{
+				Console.WriteLine("Cannot divide by zero.");
+			}
+			catch (FormatException)
+			{
+				Console.WriteLine("Invalid input. Please enter whole numbers only.");
+			}
 
 		}
 	}
