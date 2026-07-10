@@ -157,6 +157,39 @@
 				Console.WriteLine("Ticket Price: " + price + " OMR");
 
 
+				// Task 8 : Restaurant Bill with Membership Discount
+
+				Console.Write("Enter the total bill amount: ");
+				double originalBill = double.Parse(Console.ReadLine());
+
+				Console.Write("Are you a loyalty member? yes/no: ");
+				string memberAnswer = Console.ReadLine();
+
+				bool isMember;
+
+				if (memberAnswer == "yes")
+				{
+					isMember = true;
+				}
+				else
+				{
+					isMember = false;
+				}
+
+				double discountAmount = 0;
+
+				if (originalBill > 20 && isMember == true)
+				{
+					discountAmount = originalBill * 0.15;
+				}
+
+				double finalAmount = originalBill - discountAmount;
+
+				Console.WriteLine("Original Bill: " + originalBill + " OMR");
+				Console.WriteLine("Discount Amount: " + discountAmount + " OMR");
+				Console.WriteLine("Final Amount: " + finalAmount + " OMR");
+
+
 
 
 
