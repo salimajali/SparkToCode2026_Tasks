@@ -31,6 +31,28 @@
 			return firstFailingGrade;
 		}
 
+		// Task 10 
+		public static Queue<string> RemoveJob(
+		   Queue<string> printQueue,
+		   string jobToRemove
+	   )
+		{
+			Queue<string> updatedQueue = new Queue<string>();
+
+			while (printQueue.Count > 0)
+			{
+				string currentJob = printQueue.Dequeue();
+
+				if (currentJob.ToLower() != jobToRemove.ToLower())
+				{
+					updatedQueue.Enqueue(currentJob);
+				}
+			}
+
+			return updatedQueue;
+		}
+
+
 		static void Main(string[] args)
         {
 			//Task 1 : Fixed Grades Array
@@ -282,7 +304,54 @@
 			}
 
 
+			// Task 10 : Print Queue Manager
+			Queue<string> printQueue = new Queue<string>();
 
+			string printJob = "";
+
+			while (printJob.ToLower() != "done")
+			{
+				Console.WriteLine("Enter print job name or type done:");
+				printJob = Console.ReadLine();
+
+				if (printJob.ToLower() != "done")
+				{
+					printQueue.Enqueue(printJob);
+				}
+			}
+
+			Console.WriteLine("Print Queue Before Cancellation:");
+
+			if (printQueue.Count == 0)
+			{
+				Console.WriteLine("The print queue is empty.");
+			}
+			else
+			{
+				foreach (string job in printQueue)
+				{
+					Console.WriteLine(job);
+				}
+			}
+
+			Console.WriteLine("Enter the print job you want to cancel:");
+			string jobToRemove = Console.ReadLine();
+
+			printQueue = RemoveJob(printQueue, jobToRemove);
+
+			Console.WriteLine("Print Queue After Cancellation:");
+
+			if (printQueue.Count == 0)
+			{
+				Console.WriteLine("The print queue is empty.");
+			}
+			else
+			{
+				foreach (string job in printQueue)
+				{
+					Console.WriteLine(job);
+				}
+			}
 
 
 
