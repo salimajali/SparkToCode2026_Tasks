@@ -1,18 +1,39 @@
 ﻿namespace Task4Solution
 {
-		internal class Program
+    internal class Program
+    {
+		public static void PrintWelcome(string name)
 		{
-			public static void PrintWelcome(string name)
-			{
-				Console.WriteLine("Welcome to the application, " + name);
-			}
+			Console.WriteLine("Welcome to the application, " + name);
+		}
 
-			static void Main(string[] args)
-			{
-				Console.Write("Enter your name: ");
-				string userName = Console.ReadLine();
+		public static int Square(int number)
+		{
+			int result = number * number;
 
-				PrintWelcome(userName);
-			}
+			return result;
+		}
+
+
+		static void Main(string[] args)
+        {
+			// Task 1 : Personalized Welcome Function: 
+			Console.WriteLine("Enter your name:");
+			string userName = Console.ReadLine();
+
+			// Function call
+			PrintWelcome(userName);
+
+			// Task 2 : Square Number Function
+
+			Console.WriteLine("Enter a number:");
+			int userNumber = int.Parse(Console.ReadLine());
+
+			int squareResult = Square(userNumber);
+
+			Console.WriteLine("Square result: " + squareResult);
+
+
 		}
 	}
+}
