@@ -41,6 +41,22 @@
 			}
 		}
 
+		public static double CalculateArea(double length, double width)
+		{
+			double area = length * width;
+
+			return area;
+		}
+
+		// Calculate rectangle perimeter
+		public static double CalculatePerimeter(double length, double width)
+		{
+			double perimeter = 2 * (length + width);
+
+			return perimeter;
+		}
+
+
 		static void Main(string[] args)
         {
 			// Task 1 : Personalized Welcome Function: 
@@ -86,6 +102,20 @@
 			{
 				Console.WriteLine("Odd");
 			}
+
+			// Task 6 : Rectangle Area & Perimeter Functions
+			Console.WriteLine("Enter rectangle length:");
+			double length = double.Parse(Console.ReadLine());
+
+			Console.WriteLine("Enter rectangle width:");
+			double width = double.Parse(Console.ReadLine());
+
+			double area = CalculateArea(length, width);
+			double perimeter = CalculatePerimeter(length, width);
+
+			Console.WriteLine("Area: " + area);
+			Console.WriteLine("Perimeter: " + perimeter);
+
 
 
 
