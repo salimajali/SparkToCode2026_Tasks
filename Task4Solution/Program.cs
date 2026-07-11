@@ -80,6 +80,14 @@
 			}
 		}
 
+		public static void Countdown(int startingNumber)
+		{
+			for (int i = startingNumber; i >= 1; i--)
+			{
+				Console.WriteLine(i);
+			}
+		}
+
 
 		static void Main(string[] args)
         {
@@ -147,6 +155,13 @@
 			string grade = GetGradeLetter(score);
 
 			Console.WriteLine("Grade: " + grade);
+
+			// Task 8 : Countdown Function
+
+			Console.WriteLine("Enter a starting number:");
+			int number = int.Parse(Console.ReadLine());
+
+			Countdown(number);
 
 
 
