@@ -21,6 +21,14 @@
 			return fahrenheit;
 		}
 
+		public static void DisplayMenu()
+		{
+			Console.WriteLine("Main Menu");
+			Console.WriteLine("1. Start");
+			Console.WriteLine("2. Help");
+			Console.WriteLine("3. Exit");
+		}
+
 
 		static void Main(string[] args)
         {
@@ -48,6 +56,12 @@
 			double result = CelsiusToFahrenheit(celsius);
 
 			Console.WriteLine("Temperature in Fahrenheit: " + result);
+
+			// Task 4 : Fixed Menu Display Function
+			// Function call
+			DisplayMenu();
+
+			//
 
 
 
