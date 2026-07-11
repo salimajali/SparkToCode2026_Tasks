@@ -43,6 +43,30 @@
 				taskNumber++;
 			}
 
+			//Task 3 : Browsing History Stack
+			Stack<string> browserHistory = new Stack<string>();
+
+			for (int counter = 0; counter < 3; counter++)
+			{
+				Console.WriteLine("Enter website URL:");
+				string url = Console.ReadLine();
+
+				browserHistory.Push(url);
+			}
+
+			string currentPage = browserHistory.Pop();
+
+			Console.WriteLine("Going back from: " + currentPage);
+
+			if (browserHistory.Count > 0)
+			{
+				string previousPage = browserHistory.Peek();
+
+				Console.WriteLine("You are now on: " + previousPage);
+			}
+
+
+
 
 
 
