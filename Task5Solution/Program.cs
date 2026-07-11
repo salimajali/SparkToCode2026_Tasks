@@ -65,6 +65,28 @@
 				Console.WriteLine("You are now on: " + previousPage);
 			}
 
+			// Task 4 : Customer Service Queue
+			Queue<string> customerQueue = new Queue<string>();
+
+			for (int counter = 0; counter < 3; counter++)
+			{
+				Console.WriteLine("Enter customer name:");
+				string customerName = Console.ReadLine();
+
+				customerQueue.Enqueue(customerName);
+			}
+
+			string servedCustomer = customerQueue.Dequeue();
+
+			Console.WriteLine("Customer served: " + servedCustomer);
+
+			Console.WriteLine("Customers still waiting:");
+
+			foreach (string customer in customerQueue)
+			{
+				Console.WriteLine(customer);
+			}
+
 
 
 
