@@ -56,6 +56,30 @@
 			return perimeter;
 		}
 
+		public static string GetGradeLetter(int score)
+		{
+			if (score >= 90)
+			{
+				return "A";
+			}
+			else if (score >= 80)
+			{
+				return "B";
+			}
+			else if (score >= 70)
+			{
+				return "C";
+			}
+			else if (score >= 60)
+			{
+				return "D";
+			}
+			else
+			{
+				return "F";
+			}
+		}
+
 
 		static void Main(string[] args)
         {
@@ -115,6 +139,14 @@
 
 			Console.WriteLine("Area: " + area);
 			Console.WriteLine("Perimeter: " + perimeter);
+
+			// Task 7 : Grade Letter Function
+			Console.WriteLine("Enter your score:");
+			int score = int.Parse(Console.ReadLine());
+
+			string grade = GetGradeLetter(score);
+
+			Console.WriteLine("Grade: " + grade);
 
 
 
