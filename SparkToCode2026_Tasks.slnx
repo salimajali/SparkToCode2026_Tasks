@@ -1,8 +1,12 @@
 <Solution>
+ OOP_Part2_Task
+  <Project Path="OOP_Task2_Solution/OOP_Task2_Solution.csproj" Id="124b0755-c80e-4747-bd52-9539e4ad3d28" />
+
   <Project Path="MiniCompoundProject/MiniCompoundProject.csproj" Id="8e77a881-39ac-4ccd-842a-24adb0d1baeb" />
  OOP_Solution
   <Project Path="OOP_Task/OOP_Task.csproj" Id="aa5ce92a-a0fc-4b36-a3d1-b71a0d46171b" />
 
+ master
  master
   <Project Path="Task1Solution/Task1Solution.csproj" />
   <Project Path="Task2Solution/Task2Solution.csproj" Id="137ab071-efe8-4a87-a938-c25e849a0e49" />
